@@ -34,9 +34,9 @@ object Advanced extends App {
 
   def methodWhichCanThrowException(): String = throw new RuntimeException
   val aTry = Try(methodWhichCanThrowException())
-  // a try = "collection" with an either a value if the code whent well, or an exception if the code threw one
+  // a try = "collection" with an either a value if the code went well, or an exception if the code threw one
 
-  val antoherStringProcessing = aTry match {
+  val anotherStringProcessing = aTry match {
     case Success(validValue) => s"I have obtained a valid string: $validValue"
     case Failure(ex) => s"I have obtained an exception: $ex"
   }
